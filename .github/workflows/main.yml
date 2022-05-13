@@ -1,4 +1,8 @@
 on:
+  workflow_dispatch:
+    branches:
+      - main
+
 # tf plan should be triggered when a PR is opened
 #  pull_request:
 #    paths:
@@ -14,9 +18,9 @@ on:
 #      - main
   # Platform infra should be versioned, so we can run terraform on every new release
   # considering release are using tags, with the example format v0.1.0
-  create:
-    tags:
-      - v*
+  #create:
+  #  tags:
+  #    - v*
 
 name: 🏗️ Platform provisioning
 
